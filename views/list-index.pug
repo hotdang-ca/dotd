@@ -1,0 +1,21 @@
+html
+  head
+    title List All Records | Dino of the Day
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    h1 All Dinos
+    a(href="/create") Create a new dino
+
+    ul
+      each dino in dinos
+        li
+          div(class="dino-entry")
+            div(class="dino-img")
+              img(src =dino.imgURL, style="height: 54px; width: auto;")
+            div(class="dino-name")
+              =dino.name
+            div(class="dino-series")
+              span= dino.series
+              span(class="dino-date")= dino.date
+
+// a(href="/dinos/" + dino.name)

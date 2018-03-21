@@ -1,0 +1,34 @@
+html
+  head
+    title Create Record | Dino of the Day
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    h1 Create Record
+      small
+        a(href="/") (Back home)
+
+    form(method="POST", encType="multipart/form-data" action="/create")
+      div
+        label(for="date") Day
+        input(type="text", name="date", placeholder="Date (YYYY-MM-DD)")
+        // should be a date-picker
+
+      div
+        label(for="series") Series
+        input(type="text", name="series", placeholder="Dino Series")
+        // should be a date-picker
+
+      div
+        label(for="name") Dino Name
+        input(type="text", name="name", placeholder="Dinosaur Name")
+
+      div
+        label(for="description") Description
+        textarea(name="description")
+
+      div
+        label(for="image") Image
+        input(type="file", name="image")
+
+      div
+        input(type="submit")

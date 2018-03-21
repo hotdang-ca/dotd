@@ -1,0 +1,64 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.dino-date {
+  font-size: 8pt;
+  font-weight: bold;
+  text-align: right;
+}
+
+.dino-entry {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #6f6f6f;
+  border-bottom: 1px solid #6f6f6f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dino-series {
+  background-color: #404040;
+  color: white;
+}
+
+div {
+  margin: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  border-top: 1px solid #efefef;
+}
+
+input[type="text"] {
+  height: 44px;
+  font-size: 1.2rem;
+}
+
+small {
+  font-size: 0.8rem !important;
+}
+
+input[type="submit"] {
+  height: 44px;
+  font-size: 1.2rem;
+  background-color: #236af4;
+  color: white;
+}
+
+textarea {
+  line-height: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 8px;
+  font-size: 1.1rem;
+  color: #636363;
+}
