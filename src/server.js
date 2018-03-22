@@ -38,13 +38,9 @@ router.use('/api', apiRoutes);
 const listRoute = require('./routes/web/list');
 const createRoute = require('./routes/web/create');
 router.get('/', listRoute.listAll);
-app.get('/create', (req, res) => {
-  createRoute.index(req, res);
-});
-app.post('/create', (req, res) => {
-  createRoute.post(req, res);
-});
-
+app.get('/dinos/:id', listRoute.listOne);
+app.get('/create', createRoute.index);
+app.post('/create', createRoute.post);
 app.use('/', router);
 
 app.use(express.static('static'))

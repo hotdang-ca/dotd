@@ -1,0 +1,21 @@
+html
+  head
+    title Dino of the Day
+    link(rel="stylesheet", href="/css/styles.css")
+  body
+    h1
+      =dino.name
+      small
+        a(href="/") (Back home)
+
+    div
+      Date: =dino.date
+
+    div
+      Series: =dino.series
+
+    div
+      =dino.desc
+
+    div
+      img(src=dino.imgURL)
