@@ -13,9 +13,7 @@ html
             div(class="dino-img")
               img(src =dino.imgURL, style="height: 54px; width: auto;")
             div(class="dino-name")
-              =dino.name
+              a(href=`/dinos/${dino.id}`)=dino.name
             div(class="dino-series")
               span= dino.series
               span(class="dino-date")= dino.date
-
-// a(href="/dinos/" + dino.name)
