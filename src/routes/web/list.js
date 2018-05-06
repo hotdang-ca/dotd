@@ -11,6 +11,11 @@ module.exports.listAll = (req, res) => {
     },
   }, (err, resp, status) => {
     if (err) {
+      console.log('error', err);
+      res.render('list-index', { dinos: [] }, (err, html) => {
+        res.send(html);
+      });
+
     } else {
       let dinos = [];
       resp.hits.hits.forEach((hit) => {
