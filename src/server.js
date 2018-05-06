@@ -12,6 +12,7 @@ app.set('view engine', 'pug');
 
 const port = process.env.PORT || 8089;
 app.use(fileUpload());
+app.use(express.static('static'))
 
 app.use(expressWinston.logger({
   transports: [
@@ -37,13 +38,14 @@ router.use('/api', apiRoutes);
 // Web routes
 const listRoute = require('./routes/web/list');
 const createRoute = require('./routes/web/create');
-router.get('/', listRoute.listAll);
+router.use('/', listRoute.listAll);
+
 app.get('/dinos/:id', listRoute.listOne);
 app.get('/create', createRoute.index);
 app.post('/create', createRoute.post);
 app.use('/', router);
 
-app.use(express.static('static'))
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
 
-app.listen(port);
-console.log(`Listening on port ${port}`);
